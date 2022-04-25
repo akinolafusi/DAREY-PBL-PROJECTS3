@@ -255,6 +255,7 @@ Introducing variables.tf & terraform.tfvars
 #
 
 - Create a new file and name it variables.tf. Move all the variable configuration in main.tf to variables.tf.
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS3/blob/838856b21113a8c89648d31f84b53229b1d9e3ea/P16/vars.PNG)
 
 ```
 variable "region" {
@@ -286,7 +287,9 @@ variable "enable_classiclink_dns_support" {
 }
 ```
 
-Create another file, name it terraform.tfvars and Set values for each of the variables.
+- Create another file, name it terraform.tfvars and Set values for each of the variables.
+
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS3/blob/838856b21113a8c89648d31f84b53229b1d9e3ea/P16/tfvars.PNG)
 
 ```
 
