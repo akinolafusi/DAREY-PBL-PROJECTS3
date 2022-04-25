@@ -317,4 +317,5 @@ preferred_number_of_public_subnets = 2
     └── variables.tf
 ```
 
-- Run terraform plan and ensure everything works..
+- Run terraform plan and ensure everything works.
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS3/blob/838856b21113a8c89648d31f84b53229b1d9e3ea/P16/apply2.PNG)
