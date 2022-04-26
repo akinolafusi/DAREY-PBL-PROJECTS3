@@ -1,4 +1,6 @@
 
+
+
 provider "aws" {
   region = var.region
 }
@@ -12,6 +14,9 @@ resource "aws_vpc" "main" {
     enable_classiclink_dns_support = var.enable_classiclink
 
     }
+
+
+
 
      # Get list of availability zones
         data "aws_availability_zones" "available" {
