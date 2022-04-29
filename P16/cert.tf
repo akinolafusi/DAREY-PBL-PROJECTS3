@@ -7,8 +7,8 @@ resource "aws_acm_certificate" "oyindamola" {
 }
 
 # calling the hosted zone
-data "aws_route53_zone" "oyindamola" {
-  name         = "oyindamola.gq"
+data "aws_route53_zone" "devopsmaestro" {
+  name         = "devopsmaestro.com"
   private_zone = false
 }
 
@@ -27,7 +27,7 @@ resource "aws_route53_record" "oyindamola" {
   records         = [each.value.record]
   ttl             = 60
   type            = each.value.type
-  zone_id         = data.aws_route53_zone.oyindamola.zone_id
+  zone_id         = data.aws_route53_zone.devopsmaestro.zone_id
 }
 
 # validate the certificate through DNS method
@@ -38,8 +38,8 @@ resource "aws_acm_certificate_validation" "oyindamola" {
 
 # create records for tooling
 resource "aws_route53_record" "tooling" {
-  zone_id = data.aws_route53_zone.oyindamola.zone_id
-  name    = "tooling.oyindamola.gq"
+  zone_id = data.aws_route53_zone.devopsmaestro.zone_id
+  name    = "tooling.devopsmaestro.com"
   type    = "A"
 
   alias {
@@ -51,8 +51,8 @@ resource "aws_route53_record" "tooling" {
 
 # create records for wordpress
 resource "aws_route53_record" "wordpress" {
-  zone_id = data.aws_route53_zone.oyindamola.zone_id
-  name    = "wordpress.oyindamola.gq"
+  zone_id = data.aws_route53_zone.devopsmaestro.zone_id
+  name    = "wordpress.devopmaestro.com"
   type    = "A"
 
   alias {
